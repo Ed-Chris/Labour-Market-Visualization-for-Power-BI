@@ -1,5 +1,6 @@
-from flask import Flask, jsonify
+import streamlit as st
 import pandas as pd
+from flask import Flask, jsonify
 from stats_can import StatsCan
 
 # Initialize StatsCan
@@ -32,5 +33,12 @@ app = Flask(__name__)
 def get_data():
     return jsonify(df_yearly.to_dict(orient='records'))
 
+# Streamlit app
+st.title('Labour Market Characteristics Visualization')
+
+# Display the DataFrame
+st.write(df_yearly)
+
+# Run the Flask app
 if __name__ == '__main__':
     app.run(port=8080)
