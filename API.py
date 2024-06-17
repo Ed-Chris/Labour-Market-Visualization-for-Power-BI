@@ -41,4 +41,4 @@ st.write(df_yearly)
 
 # Run the Flask app
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(port=8888)
