@@ -2,3 +2,4 @@ streamlit
 pandas
 stats_can
 Flask
+numpy==1.26.4
